@@ -1,0 +1,85 @@
+.imgGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 5px;
+    position: relative;
+    float: left;
+    max-width: 50%;
+    border-radius: 10px;
+    border: 5px solid blue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 350px;
+    width: 350px;
+    background-color: black;
+}
+
+.img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.imgHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    font-family: sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.imgHover--blur {
+    backdrop-filter: blur(5px);
+}
+
+.imgHover > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.imgHover:hover {
+    opacity: 1;
+    transition: opacity 0.25s;
+}
+
+.imgHover:hover > * {
+    transform: translateY(0px);
+}
+
+.imgTitle {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.imgDescrip {
+    margin-top: 0.25em;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px;
+}
+
+.link {
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.albumName {
+    text-align: center;
+    font-size: 30px;
+}
+
+.albumListItem {
+    font-size: 18px;
+}

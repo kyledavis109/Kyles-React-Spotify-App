@@ -1,0 +1,15 @@
+body {
+    background: url('https://i.natgeofe.com/n/1db37615-012f-4981-b9ff-9e92764df1bc/19430_square.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.list {
+    margin-left: 44.9%;
+    margin-top: 2%;
+    -webkit-appearance: menulist-button;
+    height: 40px;
+    text-align: center;
+}

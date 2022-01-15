@@ -1,0 +1,16 @@
+.footer {
+  position: relative;
+  margin-top: -180px;
+  display: absolute;
+  height: 30px;
+  clear: both;
+  background-color: #ddd;
+  text-align: center;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+  
