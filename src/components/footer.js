@@ -1,8 +1,8 @@
-import '../styles/footer.css';
+import './Styles/Footer.css';
 
 function Footer() {
 
-    return(
+    return (
         <div className='footer'>
             <a href='https://www.spotify.com/us/' target='_blank' rel='noreferrer'>Spotify</a>
         </div>

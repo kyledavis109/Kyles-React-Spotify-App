@@ -1,8 +1,8 @@
 import HomePage  from './pages/homePage';
 import RelatedArtistsPage from './pages/relatedArtistsPage';
 import AlbumTracksPage from './pages/albumTracksPage';
-import Header from './components/header';
-import Footer from './components/footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {

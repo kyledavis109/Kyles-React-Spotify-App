@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../styles/homePage.css';
+import './styles/homePage.css';
 import { getArtistAlbums } from '../apiCalls/artistAlbumApiCall';
 import { fetchRelatedArtists } from '../apiCalls/relatedArtistApiCall';
 import AlbumImage from '../components/AlbumImage';

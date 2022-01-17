@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import '../styles/relatedArtistsPage.css';
+import './styles/relatedArtistsPage.css';
 import { getArtistAlbums } from '../apiCalls/artistAlbumApiCall';
 import AlbumImage from '../components/AlbumImage';
 
@@ -39,7 +39,7 @@ function RelatedArtistsPage() {
         artistAlbums();
     }, []);
 
-    return(
+    return (
         <div>
             {albumImages}
         </div>

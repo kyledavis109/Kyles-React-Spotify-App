@@ -1,5 +1,5 @@
 import { Fragment } from "react/cjs/react.production.min";
-import './styles/AlbumImage.css';
+import './Styles/AlbumImage.css';
 
 function AlbumImage({
     id,
@@ -20,7 +20,7 @@ function AlbumImage({
     const albumsView = () => {
         return (
             <Fragment>
-                <div className='imgTitle'>Artist Albums</div>
+                <div className='imgTitle'>Artist Albums:</div>
                 {
                     id === currentSelectedArtistID
                     ? createAlbumList(topAlbums)
@@ -45,7 +45,7 @@ function AlbumImage({
             className='imgGroup'
             id={id}
             key={id}
-            onMouseOver={
+            onMouseEnter={
                 showTopAlbums ? () => handleMouseOver(id) : null
             }
         >
