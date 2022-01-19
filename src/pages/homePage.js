@@ -8,7 +8,7 @@ function HomePage() {
 
     const [artistDrop, setArtistDrop] = useState('The Beatles');
     const [artistResults, setArtistResults] = useState(null);
-    const [currentSelectedArtist, setCurrentSelectedArtist] = useState([]);
+    const [currentSelectedArtist, setCurrentSelectedArtist] = useState({artist: null, albums: []});
     const [relatedArtists, setRelatedArtists] = useState();
 
 

@@ -85,3 +85,26 @@
 .albumListItem {
     font-size: 18px;
 }
+
+@media screen and (max-width: 500px) {
+    .imgGroup {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 50px;
+        padding: 14px;
+        width: 40%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .imgGroup {
+        float: none;
+        /* display: block; */
+        /* width: 100%; */
+        margin: 30px;
+        padding: 14px;
+        width: 20%;
+        margin-right: 70px;
+    }
+}
