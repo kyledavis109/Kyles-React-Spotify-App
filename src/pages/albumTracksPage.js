@@ -12,7 +12,18 @@ function AlbumTracksPage() {
     const albumURL = params.get('albumURL')
         
     async function handleGetSongs(albumIDParam) {
+        if (albumIDParam === null || albumIDParam === undefined) {
+            throw Error('albumIDParam param is required.')
+        } else if (typeof albumIDParam !== 'string') {
+            throw TypeError('albumIDParam param must be a string.')
+        } else if (albumIDParam.length < 22) {
+            throw Error('albumIDParam param must be 22 characters long.')
+        }
+        
         const albumDetails = await getAlbumTracks(albumIDParam);
+        if ('error' in albumDetails) {
+            return albumDetails
+        }
         return albumDetails.items.map((song) => {
             const { id, name, track_number, duration_ms, disc_number } = song;
             return { id, name, track_number, duration_ms, disc_number };
@@ -20,6 +31,23 @@ function AlbumTracksPage() {
     };
 
     function renderSongs(songs) {
+        if (songs === null || songs === undefined) {
+            throw Error('songs param is required.')
+        } else if (!Array.isArray(songs)) {
+            throw TypeError('songs param must be an array.')
+        } else {
+            songs.forEach((song) => {
+                if (!('id' in song)) {
+                    throw Error('Element in songs is missing, required key id.')
+                } else if (!('name' in song)) {
+                    throw Error('Element in songs is missing, required key name.')
+                } else if (!('track_number' in song)) {
+                    throw Error('Element in songs is missing, required key track_number.')
+                } else if (!('duration_ms' in song)) {
+                    throw Error('Element in songs is missing, required key duration_ms.')
+                }
+            })
+        }
         return songs.map((song) => {
             const { id, name, track_number, duration_ms } = song;
             const cal = (ms) => {
@@ -43,6 +71,10 @@ function AlbumTracksPage() {
     useEffect(() => {
         async function createAlbumDetails() {
             const songs = await handleGetSongs(albumID);
+            if ('error' in songs) {
+                setAlbumDetails(songs.error)
+                return
+            }
             setAlbumDetails(renderSongs(songs));
         };
         createAlbumDetails();
