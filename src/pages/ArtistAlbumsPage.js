@@ -11,15 +11,15 @@ function ArtistAlbumsPage() {
 
     async function handleArtistAlbums(artistID) {
         if (artistID === null || artistID === undefined) {
-            throw Error('artistID param is required.') 
+            throw Error('artistID param is required.');
         } else if (typeof artistID !== 'string') {
-            throw TypeError('artistID param must be a string.')
+            throw TypeError('artistID param must be a string.');
         } else if (artistID.length < 22) {
-            throw Error('artistID param must be 22 characters long.')
-        }
+            throw Error('artistID param must be 22 characters long.');
+        };
         const albumImages = await getArtistAlbums(artistID);
         if ('error' in albumImages) {
-            return albumImages
+            return albumImages;
         }
         return albumImages.map((artist) => {
             const { id, images, name } = artist;
@@ -46,9 +46,9 @@ function ArtistAlbumsPage() {
             const results = await handleArtistAlbums(artistID);
             if ('error' in results) {
                 // This will show error message instead of rendering images.
-                setAlbumImages(results.error)
-                return
-            }
+                setAlbumImages(results.error);
+                return;
+            };
             // Only run if not a error.
             // This is what causes the albumImage component to start rendering. 
             setAlbumImages(createAlbumImages(results));

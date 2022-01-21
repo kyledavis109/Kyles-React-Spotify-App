@@ -7,7 +7,7 @@ function Header() {
             <a className='active' href='/'>Home</a>
             <input type="text" placeholder="Search.."></input>
         </div>
-    )
-}
+    );
+};
 
 export default Header;

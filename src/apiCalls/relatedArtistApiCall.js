@@ -2,16 +2,16 @@
    from the Spotify API endpoint. */
 export async function fetchRelatedArtists(artistID) {
     if (artistID === null || artistID === undefined) {
-        throw Error('artistID param is required.')
+        throw Error('artistID param is required.');
     } else if (typeof artistID !== 'string') {
-        throw TypeError('artistID param must be a string.')
+        throw TypeError('artistID param must be a string.');
     } else if (artistID.length < 22) {
-        throw Error('artistID param must be 22 characters long.')
+        throw Error('artistID param must be 22 characters long.');
     }
     const url = `/api/relatedArtists/${artistID}`;
     const response = await fetch(url);
     if (response.status !== 200) {
-        return {error: 'Failed to fetch related artist data.'}
+        return {error: 'Failed to fetch related artist data.'};
     }
     const results = await response.json();
     return results;
