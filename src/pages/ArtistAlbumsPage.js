@@ -20,7 +20,7 @@ function ArtistAlbumsPage() {
         const albumImages = await getArtistAlbums(artistID);
         if ('error' in albumImages) {
             return albumImages;
-        }
+        };
         return albumImages.map((artist) => {
             const { id, images, name } = artist;
             const { width, height, url, key } = images[0];
@@ -30,8 +30,9 @@ function ArtistAlbumsPage() {
 
     function createAlbumImages(artistAlbums) {
         return artistAlbums.slice(0, 12).map((image) => {
-            const { url, id, key, name } = image;
+            const { url, id, name } = image;
             return <AlbumImage
+                key={id}
                 id={id}
                 url={url}
                 albumName={name}

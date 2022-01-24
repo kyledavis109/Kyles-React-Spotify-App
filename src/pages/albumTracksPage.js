@@ -64,6 +64,7 @@ function AlbumTracksPage() {
                 <div 
                     className='songContainer'
                     id={id}
+                    key={id}
                 >
                     <span>{track_number}</span>
                     <span>{name}</span>

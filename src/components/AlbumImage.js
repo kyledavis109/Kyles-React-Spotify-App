@@ -11,6 +11,7 @@ function AlbumImage({
     showTopAlbums = false,
     handleMouseOver = null
 } = {}) {
+    //Validation for AlbumImage props.
     if (id === '') {
         throw Error('id prop cannot be empty string.');
     } else if (typeof id !== 'string') {

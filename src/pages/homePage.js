@@ -79,7 +79,8 @@ function HomePage() {
         };
         return relatedArtistsData.map((artist) => {
             const { url, id } = artist;
-            return <AlbumImage 
+            return <AlbumImage
+                key={id} 
                 id={id}
                 url={url}
                 showAlbumName={false}
