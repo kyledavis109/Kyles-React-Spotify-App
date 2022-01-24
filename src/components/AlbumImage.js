@@ -4,10 +4,12 @@ import './Styles/AlbumImage.css';
 function AlbumImage({
     id = '',
     url = '', 
-    albumName = '', 
+    albumName = '',
+    artistName = '', 
     topAlbums = [], 
     currentSelectedArtistID = '', 
-    showAlbumName = false, 
+    showAlbumName = false,
+    showArtistName = false,
     showTopAlbums = false,
     handleMouseOver = null
 } = {}) {
@@ -21,14 +23,17 @@ function AlbumImage({
         throw Error('url prop cannot be empty string.');
     } else if (typeof url !== 'string') {
         throw TypeError('url prop must be string.');
-    } else if (!url.includes('https://i.scdn.co/image/')) {
-        throw Error('url prop was given invalid url. Must match pattern https://i.scdn.co/image/:imageID');
-    } else {
-        const urlImageID = url.split('/').slice(-1)[0];
-        if (urlImageID.length !== 40) {
-            throw Error('url prop is invalid, the image id is the incorrect length. Must be 40 characters long.');
+    } 
+    if (url !== 'NOT FOUND') {
+        if (!url.includes('https://i.scdn.co/image/')) {
+            throw Error('url prop was given invalid url. Must match pattern https://i.scdn.co/image/:imageID');
+        } else {
+            const urlImageID = url.split('/').slice(-1)[0];
+            if (urlImageID.length !== 40) {
+                throw Error('url prop is invalid, the image id is the incorrect length. Must be 40 characters long.');
+            };
         };
-    };
+    }
     if (typeof albumName !== 'string') {
         throw TypeError('albumName prop must be string.');
     };
@@ -52,6 +57,16 @@ function AlbumImage({
     if (handleMouseOver && typeof handleMouseOver !== 'function') {
         throw TypeError('handleMouseOver prop must be a function.');
     };
+
+    if (showArtistName) {
+        if (typeof showArtistName !== 'boolean') {
+            throw TypeError('showArtistName prop must be a boolean.')
+        } else if (artistName === '') {
+            throw Error('artistName prop is required.')
+        } else if (typeof artistName !== 'string') {
+            throw TypeError('artistName prop must be a string.')
+        }
+    }
 
     function createAlbumList(albumsList) {
         return albumsList.map((album) => {
@@ -82,6 +97,15 @@ function AlbumImage({
         );
     };
 
+    const artistNameView = () => {
+        return (
+            <Fragment>
+                <p className='artistName'>{artistName}</p>
+                <a className='link' href={`/artists/${id}`}>Click For Details</a>
+            </Fragment>
+        )
+    }
+
     return (
         <div
             className='imgGroup'
@@ -96,6 +120,7 @@ function AlbumImage({
                     <div className='imgDescrip'>
                         {showAlbumName ? albumNameView() : null}
                         {showTopAlbums ? albumsView() : null}
+                        {showArtistName ? artistNameView() : null}
                     </div>
             </div>
         </div>

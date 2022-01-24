@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './styles/homePage.css';
 import { getArtistAlbums } from '../apiCalls/artistAlbumApiCall';
 import { fetchRelatedArtists } from '../apiCalls/relatedArtistApiCall';
+import { fetchSearchArtists } from '../apiCalls/searchArtistApiCall';
 import AlbumImage from '../components/AlbumImage';
 
 function HomePage() {
@@ -10,6 +11,8 @@ function HomePage() {
     const [artistResults, setArtistResults] = useState(null);
     const [currentSelectedArtist, setCurrentSelectedArtist] = useState({artist: null, albums: []});
     const [relatedArtists, setRelatedArtists] = useState(null);
+    const [searchValueState, setSearchValueState] = useState(null);
+    const [searchArtistImages, setSearchArtistImages] = useState(null);
 
 
     function handleDropDown(event) {
@@ -55,11 +58,15 @@ function HomePage() {
         });
     };
 
-    function createArtistImages(relatedArtistsData) {
+    function createArtistImages(relatedArtistsData, renderType = null) {
         if (relatedArtistsData === null || relatedArtistsData === undefined) {
             throw Error('relatedArtistsData is a required param.');
         } else if (!Array.isArray(relatedArtistsData)) {
             throw TypeError('relatedArtistsData param must be an array.');
+        } else if (!renderType) {
+            throw Error('renderType is required.')
+        } else if (renderType !== 'showTopAlbums' && renderType !== 'showArtistName') {
+            throw Error('renderType is invaid. Must be either: showTopAlbums or showArtistName')
         } else {
             relatedArtistsData.forEach((artistsData) => {
                 if (typeof artistsData !== 'object') {
@@ -79,18 +86,53 @@ function HomePage() {
         };
         return relatedArtistsData.map((artist) => {
             const { url, id } = artist;
-            return <AlbumImage
-                key={id} 
-                id={id}
-                url={url}
-                showAlbumName={false}
-                showTopAlbums={true}
-                currentSelectedArtistID={currentSelectedArtist.artist}
-                topAlbums={currentSelectedArtist.albums}
-                handleMouseOver={handleRelatedArtistAlbums}
-            />
+            if (renderType === 'showTopAlbums') {
+                return <AlbumImage
+                    key={id} 
+                    id={id}
+                    url={url}
+                    showTopAlbums={true}
+                    currentSelectedArtistID={currentSelectedArtist.artist}
+                    topAlbums={currentSelectedArtist.albums}
+                    handleMouseOver={handleRelatedArtistAlbums}
+                />
+            } else if (renderType === 'showArtistName') {
+                const artistName = artist.name
+                return <AlbumImage
+                    key={id} 
+                    id={id}
+                    url={url}
+                    artistName={artistName}
+                    showArtistName={true}
+                />
+            }
         });
     };
+
+    async function handleSearch(artistSearchValue) {
+        if (artistSearchValue === null) {
+            throw Error('artistSearchValue param is required.')
+        } else if (typeof artistSearchValue !== 'string') {
+            throw TypeError('artistSearchValue param must be a string.')
+        } else if (artistSearchValue.trim() === '') {
+            throw Error('artistSearchValue param must include a search value.')
+        }
+        const searchResults = await fetchSearchArtists(artistSearchValue)
+        if ('error' in searchResults) {
+            return searchResults;
+        }
+        return searchResults;
+    }
+
+    async function handleSearchButtonPress() {
+        const searchResults = await handleSearch(searchValueState);
+        if ('error' in searchResults) {
+            setSearchArtistImages(searchResults.error)
+            return searchResults;
+        }
+        const searchResultImages = createArtistImages(searchResults, 'showArtistName')
+        setSearchArtistImages(searchResultImages)
+    }
 
     useEffect(() => {
         async function handleRelatedArtists() {
@@ -111,23 +153,35 @@ function HomePage() {
     // This will not run if there is an error from the useEffect above.
     useEffect(() => {
         if (relatedArtists) {
-            const artistImages = createArtistImages(relatedArtists);
+            const artistImages = createArtistImages(relatedArtists, 'showTopAlbums');
             setArtistResults(artistImages);
         }
     }, [relatedArtists, currentSelectedArtist]);
 
     return (
         <div>
+            <input
+                type='text'
+                id='searchInput'
+                onChange={(event) => setSearchValueState(event.target.value)}
+            />
+           <button 
+                id='searchInputButton'
+                onClick={handleSearchButtonPress}
+           >
+                Search Artist...
+            </button>
             <select
-            value={artistDrop}
-            className="list" 
-            onChange={ handleDropDown }
+                value={artistDrop}
+                className="list" 
+                onChange={ handleDropDown }
             >
                 <option value='The Beatles'>The Beatles</option>
                 <option value='SRV'>SRV</option>
                 <option value='The Rolling Stones'>The Rolling Stones</option>
             </select>
-            <div>{ artistResults }</div>
+            <div>{ searchArtistImages }</div>
+            {/* <div>{ artistResults }</div> */}
         </div>
     );
 };
