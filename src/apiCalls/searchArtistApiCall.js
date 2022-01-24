@@ -4,12 +4,23 @@ export async function fetchSearchArtists(searchValue) {
         throw Error('artistID param is required.');
     } else if (typeof searchValue !== 'string') {
         throw TypeError('artistID param must be a string.');
-}
-const url =  `https://api.spotify.com/v1/search?q=artist:${searchValue}&type=artist`;
-const response = await fetch(url);
-if (response.status !== 200) {
-    return {error: 'Failed to fetch searched artist data.'};
-}
-const results = await response.json();
-return results;
+    }
+    const url =  `/api/search?searchValue=${searchValue}`;
+    const response = await fetch(url);
+    if (response.status !== 200) {
+        return {error: 'Failed to fetch searched artist data.'};
+    }
+    const results = await response.json();
+    return results.map((artist) => {
+        const { id, images, name } = artist;
+        let width = 'NOT FOUND';
+        let height = 'NOT FOUND';
+        let url = 'NOT FOUND';
+        if (images.length !== 0) {
+            width = images[0].width;
+            height = images[0].height;
+            url = images[0].url
+        }
+        return { id, width, height, url, name };
+    });
 };
