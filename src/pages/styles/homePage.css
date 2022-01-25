@@ -4,6 +4,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100%;
 }
 
 .list {
@@ -12,4 +13,25 @@ body {
     -webkit-appearance: menulist-button;
     height: 40px;
     text-align: center;
+}
+
+.input {
+    width: 400px;
+    height: 30px;
+    /* margin-bottom: 500px; */
+    margin-top: 200px;
+    margin-left: 500px;
+    font-size: 17px;
+    /* display: block; */
+    /* text-align: center; */
+}
+
+.button {
+    /* margin-top: 200px; */
+    height: 32px;
+    position: relative;
+    /* display: inline; */
+    margin-left: 920px;
+    top: -33px;
+    /* margin-bottom: 590px; */
 }
