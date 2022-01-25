@@ -7,6 +7,7 @@ function HomePage() {
 
     const [searchValueState, setSearchValueState] = useState(null);
     const [searchArtistImages, setSearchArtistImages] = useState(null);
+    const [searchLoading, setSearchLoading] = useState(false);
 
     async function handleSearch(artistSearchValue) {
         if (artistSearchValue === null) {
@@ -24,13 +25,23 @@ function HomePage() {
     }
 
     async function handleSearchButtonPress() {
-        const searchResults = await handleSearch(searchValueState);
-        if ('error' in searchResults) {
-            setSearchArtistImages(searchResults.error)
-            return searchResults;
+        try {
+            setSearchLoading(true)
+            const searchResults = await handleSearch(searchValueState);
+            if ('error' in searchResults) {
+                throw searchResults.error
+            }
+            const searchResultImages = createArtistImages(searchResults, 'showArtistName')
+            setSearchArtistImages(searchResultImages)
+        } catch (error) {
+            if (typeof error === 'string') {
+                setSearchArtistImages(<div style={{backgroundColor: 'red'}}>{error}</div>)
+                return
+            }
+            setSearchArtistImages(<div style={{backgroundColor: 'red'}}>'Failed to load...</div>)
+        } finally {
+            setSearchLoading(false)
         }
-        const searchResultImages = createArtistImages(searchResults, 'showArtistName')
-        setSearchArtistImages(searchResultImages)
     }
 
     return (
@@ -43,10 +54,11 @@ function HomePage() {
            <button 
                 id='searchInputButton'
                 onClick={handleSearchButtonPress}
+                disabled = {searchLoading}
            >
                 Search Artist...
             </button>
-            <div>{ searchArtistImages }</div>
+            <div>{searchLoading ? <div style={{backgroundColor: 'white'}}>'Loading...'</div> : searchArtistImages }</div>
         </div>
     );
 };
