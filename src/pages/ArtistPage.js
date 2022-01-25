@@ -60,10 +60,10 @@ function ArtistAlbumsPage() {
 
     return (
         <div>
-            <h1 className='artist'>Artist Albums</h1>
+            <h1 className='rainbow'>Artist's Albums</h1>
             {albumImages}
             
-            <h1 className='related'>Related Artists</h1>
+            <h1 className='rainbow'>Related Artists</h1>
             <RelatedArtists
                 artistID={artistID}
             />
