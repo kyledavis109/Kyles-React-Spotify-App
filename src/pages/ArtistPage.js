@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import './styles/relatedArtistsPage.css';
 import { getArtistAlbums } from '../apiCalls/artistAlbumApiCall';
 import AlbumImage from '../components/AlbumImage';
+import { RelatedArtists } from '../components/RelatedArtists';
 
 function ArtistAlbumsPage() {
 
@@ -59,7 +60,13 @@ function ArtistAlbumsPage() {
 
     return (
         <div>
+            <h1>Artist Albums</h1>
             {albumImages}
+            
+            <h1>Related Artists</h1>
+            <RelatedArtists
+                artistID={artistID}
+            />
         </div>
     );
 };
