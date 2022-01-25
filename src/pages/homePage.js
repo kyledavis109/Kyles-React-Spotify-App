@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './styles/homePage.css';
+import './styles/HomePage.css';
 import { fetchSearchArtists } from '../apiCalls/searchArtistApiCall';
 import { createArtistImages } from '../functions/createArtistImages';
 
@@ -47,11 +47,13 @@ function HomePage() {
     return (
         <div>
             <input
+                className='input'
                 type='text'
                 id='searchInput'
                 onChange={(event) => setSearchValueState(event.target.value)}
             />
-           <button 
+           <button
+                className='button'
                 id='searchInputButton'
                 onClick={handleSearchButtonPress}
                 disabled = {searchLoading}

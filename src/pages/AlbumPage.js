@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import './styles/albumTracksPage.css';
+import './styles/AlbumPage.css';
 import { getAlbumTracks } from '../apiCalls/albumTrackApiCall';
 import AlbumImage from '../components/AlbumImage';
 
