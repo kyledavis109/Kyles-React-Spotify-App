@@ -4,7 +4,6 @@ import { getArtistAlbums } from '../apiCalls/artistAlbumApiCall';
 import { createArtistImages } from '../functions/createArtistImages';
 
 export function RelatedArtists({artistID = null}) {
-    console.log(artistID)
     if (artistID === null) {
         throw Error('artistID prop is required.')
     } else if (typeof artistID !== 'string') {
