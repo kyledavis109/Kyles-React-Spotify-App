@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Anton');
 
 
@@ -23,9 +23,11 @@ body {
     width: 400px;
     height: 30px;
     /* margin-bottom: 500px; */
-    margin-top: 200px;
-    margin-left: 500px;
+    top: -50%;
+    margin-top: 100px;
+    margin-left: 430px;
     font-size: 17px;
+    /* position: static; */
     /* display: block; */
     /* text-align: center; */
 }
@@ -35,7 +37,7 @@ body {
     height: 32px;
     position: relative;
     /* display: inline; */
-    margin-left: 920px;
+    margin-left: 850px;
     top: -33px;
     /* margin-bottom: 590px; */
 }
