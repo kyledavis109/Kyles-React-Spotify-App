@@ -1,9 +1,9 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage  from './pages/HomePage';
 import ArtistAlbumsPage from './pages/ArtistPage';
 import AlbumTracksPage from './pages/AlbumPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
