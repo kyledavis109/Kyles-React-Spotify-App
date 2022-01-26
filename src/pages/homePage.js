@@ -59,10 +59,10 @@ function HomePage() {
                 onClick={handleSearchButtonPress}
                 disabled = {searchLoading}
            >
-                Search Artist...
+                Click To Search...
             </button>
             <div>{searchLoading ? <div className='rainbow'>Loading...</div> : searchArtistImages}</div>
-        </div>
+        </div> 
     );
 };
 
