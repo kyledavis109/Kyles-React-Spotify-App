@@ -12,7 +12,7 @@ async function getAlbumTracks(albumID) {
     const url = `/api/tracks/${albumID}`;
     const response = await fetch(url);
     if (response.status !== 200) {
-        return {error: 'Failed to fetch related album track data.'};
+        return {error: <div className='rainbow'>Failed to fetch related album track data.</div>};
     }
     const results = await response.json();
     return results;

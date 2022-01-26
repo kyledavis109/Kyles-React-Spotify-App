@@ -11,7 +11,7 @@ export async function fetchRelatedArtists(artistID) {
     const url = `/api/relatedArtists/${artistID}`;
     const response = await fetch(url);
     if (response.status !== 200) {
-        return {error: 'Failed to fetch related artist data.'};
+        return {error: <div className='rainbow'>Failed to fetch related artist data.</div>};
     }
     const results = await response.json();
     return results;
