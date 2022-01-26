@@ -22,24 +22,17 @@ body {
 .input {
     width: 400px;
     height: 30px;
-    /* margin-bottom: 500px; */
     top: -50%;
     margin-top: 100px;
-    margin-left: 430px;
+    margin-left: 500px;
     font-size: 17px;
-    /* position: static; */
-    /* display: block; */
-    /* text-align: center; */
 }
 
 .button {
-    /* margin-top: 200px; */
     height: 32px;
     position: relative;
-    /* display: inline; */
-    margin-left: 850px;
+    margin-left: 910px;
     top: -33px;
-    /* margin-bottom: 590px; */
 }
 
 .rainbow {
