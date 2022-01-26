@@ -1,6 +1,6 @@
 import AlbumImage from '../components/AlbumImage';
 
-export function createArtistImages(relatedArtistsData, renderType = null, currentSelectedArtist = null, handleRelatedArtistAlbums = null) {
+function createArtistImages(relatedArtistsData, renderType = null, currentSelectedArtist = null, handleRelatedArtistAlbums = null) {
     if (relatedArtistsData === null || relatedArtistsData === undefined) {
         throw Error('relatedArtistsData is a required param.');
     } else if (!Array.isArray(relatedArtistsData)) {
@@ -67,3 +67,5 @@ export function createArtistImages(relatedArtistsData, renderType = null, curren
         }
     });
 };
+
+export default createArtistImages;
