@@ -35,10 +35,10 @@ function HomePage() {
             setSearchArtistImages(searchResultImages)
         } catch (error) {
             if (typeof error === 'string') {
-                setSearchArtistImages(<div style={{backgroundColor: 'red'}}>{error}</div>)
+                setSearchArtistImages(<div className='rainbow'>{error}</div>)
                 return
             }
-            setSearchArtistImages(<div style={{backgroundColor: 'red'}}>'Failed to load...</div>)
+            setSearchArtistImages(<div className='rainbow'>'Failed to load...</div>)
         } finally {
             setSearchLoading(false)
         }
@@ -50,6 +50,7 @@ function HomePage() {
                 className='input'
                 type='text'
                 id='searchInput'
+                placeHolder='Search Artist...'
                 onChange={(event) => setSearchValueState(event.target.value)}
             />
            <button
@@ -60,7 +61,7 @@ function HomePage() {
            >
                 Search Artist...
             </button>
-            <div>{searchLoading ? <div style={{backgroundColor: 'white'}}>'Loading...'</div> : searchArtistImages }</div>
+            <div>{searchLoading ? <div className='rainbow'>Loading...</div> : searchArtistImages}</div>
         </div>
     );
 };
