@@ -1,6 +1,6 @@
 /* API call for fetching album tracks of selected album of related artists of specified artists
    on the homepage in the dropdown menu from the Spotify API endpoint.  */
-export async function getAlbumTracks(albumID) {
+async function getAlbumTracks(albumID) {
     // Validation for albumID param
     if (albumID === null || albumID === undefined) {
         throw Error('albumID param is required.');
@@ -17,3 +17,5 @@ export async function getAlbumTracks(albumID) {
     const results = await response.json();
     return results;
 };
+
+export default getAlbumTracks;

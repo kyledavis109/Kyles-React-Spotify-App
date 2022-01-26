@@ -1,5 +1,6 @@
-// Comment.
-export async function fetchSearchArtists(searchValue) {
+/* API call for fetching searched artist specified in home page search input box from the Spotify
+   API endpoint. */
+async function fetchSearchArtists(searchValue) {
     if (searchValue === null || searchValue === undefined) {
         throw Error('artistID param is required.');
     } else if (typeof searchValue !== 'string') {
@@ -24,3 +25,5 @@ export async function fetchSearchArtists(searchValue) {
         return { id, width, height, url, name };
     });
 };
+
+export default fetchSearchArtists;

@@ -1,6 +1,6 @@
 /* API call for fetching albums of related artists of the specified artists on the homepage in the
    dropdown menu from the Spotify API endpoint. */
-export async function getArtistAlbums(artistID) {
+async function getArtistAlbums(artistID) {
     if (artistID === null || artistID === undefined) {
         throw Error('artistID param is required.') 
     } else if (typeof artistID !== 'string') {
@@ -16,3 +16,5 @@ export async function getArtistAlbums(artistID) {
     const results = await response.json();
     return results
 };
+
+export default getArtistAlbums;

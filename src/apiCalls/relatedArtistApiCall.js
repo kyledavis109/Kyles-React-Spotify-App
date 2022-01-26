@@ -16,3 +16,5 @@ export async function fetchRelatedArtists(artistID) {
     const results = await response.json();
     return results;
 };
+
+export default fetchRelatedArtists;
