@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getArtistAlbums } from '../apiCalls/artistAlbumApiCall';
+import getArtistAlbums from '../apiCalls/artistAlbumApiCall';
 import AlbumImage from '../components/AlbumImage';
-import { RelatedArtists } from '../components/RelatedArtists';
+import RelatedArtists  from '../components/RelatedArtists';
 import './styles/ArtistPage.css';
 
 function ArtistAlbumsPage() {

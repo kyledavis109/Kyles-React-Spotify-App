@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import fetchSearchArtists from '../apiCalls/searchArtistApiCall';
+import createArtistImages from '../functions/createArtistImages';
 import './styles/HomePage.css';
-import { fetchSearchArtists } from '../apiCalls/searchArtistApiCall';
-import { createArtistImages } from '../functions/createArtistImages';
 
 function HomePage() {
 
