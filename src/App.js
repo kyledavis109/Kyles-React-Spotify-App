@@ -16,6 +16,7 @@ function App() {
             <Route exact path="/artists/:artistID" element={<ArtistAlbumsPage/>}/>
             <Route exact path="/albums/:albumID" element={<AlbumTracksPage/>} />
           </Routes>
+          <br></br>
         <Footer />
       </div>
     </Router>
