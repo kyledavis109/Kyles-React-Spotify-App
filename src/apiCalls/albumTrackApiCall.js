@@ -1,4 +1,4 @@
-import './Styles/albumTrackApiCall.css';
+import './styles/albumTrackApiCall.css';
 
 /* API call for fetching album tracks of selected album of related artists of specified artists
    on the homepage in the dropdown menu from the Spotify API endpoint.  */

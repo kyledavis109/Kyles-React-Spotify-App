@@ -1,4 +1,4 @@
-import './Styles/artistAlbumApiCall.css';
+import './styles/artistAlbumApiCall.css';
 
 
 /* API call for fetching albums of related artists of the specified artists on the homepage in the
