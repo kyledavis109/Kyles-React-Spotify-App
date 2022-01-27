@@ -90,6 +90,7 @@ function AlbumTracksPage() {
 
     return (
         <div>
+            <h1 className='rainbow'>Album Details:</h1>
             <AlbumImage
                 id={albumID}
                 url={albumURL}
