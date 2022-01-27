@@ -40,7 +40,7 @@ body {
     /* Font options */
     font-family: 'Pacifico', cursive;
     text-shadow: 2px 2px 4px #000000;
-    font-size:40px;
+    font-size: 40px;
     text-align: center;
 
     /* Chrome, Safari, Opera */
@@ -68,7 +68,7 @@ body {
     100%{color: orange;}
 }
  
- /* Internet Explorer */
+/* Internet Explorer */
 @-ms-keyframes rainbow {
     0%{color: orange;}	
     10%{color: purple;}	
@@ -83,7 +83,7 @@ body {
     100%{color: orange;}
 }
  
- /* Standard Syntax */
+/* Standard Syntax */
 @keyframes rainbow{
     0%{color: orange;}	
     10%{color: purple;}	
