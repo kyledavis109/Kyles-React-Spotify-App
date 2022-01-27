@@ -1,3 +1,5 @@
+import './Styles/searchArtistApiCall.css';
+
 /* API call for fetching searched artist specified in home page search input box from the Spotify
    API endpoint. */
 async function fetchSearchArtists(searchValue) {
@@ -9,7 +11,7 @@ async function fetchSearchArtists(searchValue) {
     const url =  `/api/search?searchValue=${searchValue}`;
     const response = await fetch(url);
     if (response.status !== 200) {
-        return {error: 'Failed to fetch searched artist data.'};
+        return {error: <div className='rainbow'>Failed to fetch searched artist data.</div>};
     }
     const results = await response.json();
     return results.map((artist) => {

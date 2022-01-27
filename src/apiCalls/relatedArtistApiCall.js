@@ -1,3 +1,5 @@
+import './Styles/relatedArtistApiCall.css';
+
 /* API call for fetching related artists of the specified artists on the homepage in the dropdown menu
    from the Spotify API endpoint. */
 export async function fetchRelatedArtists(artistID) {
