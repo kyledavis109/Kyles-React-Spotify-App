@@ -6,9 +6,9 @@ function createArtistImages(relatedArtistsData, renderType = null, currentSelect
     } else if (!Array.isArray(relatedArtistsData)) {
         throw TypeError('relatedArtistsData param must be an array.');
     } else if (!renderType) {
-        throw Error('renderType is required.')
+        throw Error('renderType is required.');
     } else if (renderType !== 'showTopAlbums' && renderType !== 'showArtistName') {
-        throw Error('renderType is invaid. Must be either: showTopAlbums or showArtistName')
+        throw Error('renderType is invaid. Must be either: showTopAlbums or showArtistName');
     } else {
         relatedArtistsData.forEach((artistsData) => {
             if (typeof artistsData !== 'object') {
@@ -29,18 +29,18 @@ function createArtistImages(relatedArtistsData, renderType = null, currentSelect
 
     if (renderType === 'showTopAlbums') {
         if (currentSelectedArtist === null || currentSelectedArtist === undefined) {
-            throw Error('currentSelectedArtist param is required.')
+            throw Error('currentSelectedArtist param is required.');
         } else if (typeof currentSelectedArtist !== 'object') {
-            throw TypeError('currentSelectedArtist param must be an object.')
+            throw TypeError('currentSelectedArtist param must be an object.');
         } else if (!('artist' in currentSelectedArtist) || !('albums' in currentSelectedArtist)) {
-            throw Error('currentSelectedArtist param must contain the keys artist and albums.')
-        }
+            throw Error('currentSelectedArtist param must contain the keys artist and albums.');
+        };
         if (handleRelatedArtistAlbums === null || handleRelatedArtistAlbums === undefined) {
-            throw Error('handleRelatedArttistAlbums param is required.')
+            throw Error('handleRelatedArttistAlbums param is required.');
         } else if (typeof handleRelatedArtistAlbums !== 'function') {
-            throw TypeError('handleRelatedArtistAlbums param must be a function')
-        }
-    }
+            throw TypeError('handleRelatedArtistAlbums param must be a function');
+        };
+    };
 
 
     return relatedArtistsData.map((artist) => {
@@ -64,7 +64,7 @@ function createArtistImages(relatedArtistsData, renderType = null, currentSelect
                 artistName={artistName}
                 showArtistName={true}
             />
-        }
+        };
     });
 };
 
