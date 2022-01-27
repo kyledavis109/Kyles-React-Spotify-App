@@ -5,12 +5,12 @@ import createArtistImages  from '../functions/createArtistImages';
 
 function RelatedArtists({artistID = null}) {
     if (artistID === null) {
-        throw Error('artistID prop is required.')
+        throw Error('artistID prop is required.');
     } else if (typeof artistID !== 'string') {
-        throw TypeError('artistID prop must be a string.')
+        throw TypeError('artistID prop must be a string.');
     } else if (artistID.length !== 22) {
-        throw Error('artistID prop must be atleast 22 characters long.')
-    }
+        throw Error('artistID prop must be atleast 22 characters long.');
+    };
 
     const [currentSelectedArtist, setCurrentSelectedArtist] = useState({artist: null, albums: []});
     const [artistResults, setArtistResults] = useState(null);
@@ -36,7 +36,7 @@ function RelatedArtists({artistID = null}) {
         } else if (typeof artistID !== 'string') {
             throw TypeError('artistID param must be a string.');
         } else if (artistID.length !== 22) {
-            throw Error('artistID param must be 22 characters long.')
+            throw Error('artistID param must be 22 characters long.');
         };
         const relatedArtists = await fetchRelatedArtists(artistID);
         if ('error' in relatedArtists) {
@@ -74,11 +74,9 @@ function RelatedArtists({artistID = null}) {
     }, [relatedArtists, currentSelectedArtist]);
 
     if (!artistResults) {
-        return 'Loading...'
+        return 'Loading...';
     }
-
-    return artistResults
-    
-}
+    return artistResults;  
+};
 
 export default RelatedArtists;
