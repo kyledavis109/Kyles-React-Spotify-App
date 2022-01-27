@@ -33,7 +33,7 @@ function AlbumImage({
                 throw Error('url prop is invalid, the image id is the incorrect length. Must be 40 characters long.');
             };
         };
-    }
+    };
     if (typeof albumName !== 'string') {
         throw TypeError('albumName prop must be string.');
     };
@@ -47,8 +47,8 @@ function AlbumImage({
         });
     };
     if (showAlbumName && typeof showAlbumName !== 'boolean') {
-        throw TypeError('showAlbumName prop must be a boolean.')
-    }
+        throw TypeError('showAlbumName prop must be a boolean.');
+    };
 
     if (showTopAlbums && typeof showTopAlbums !== 'boolean') {
         throw TypeError('showTopAlbums prop must be a boolean.');
@@ -60,13 +60,13 @@ function AlbumImage({
 
     if (showArtistName) {
         if (typeof showArtistName !== 'boolean') {
-            throw TypeError('showArtistName prop must be a boolean.')
+            throw TypeError('showArtistName prop must be a boolean.');
         } else if (artistName === '') {
-            throw Error('artistName prop is required.')
+            throw Error('artistName prop is required.');
         } else if (typeof artistName !== 'string') {
-            throw TypeError('artistName prop must be a string.')
-        }
-    }
+            throw TypeError('artistName prop must be a string.');
+        };
+    };
 
     function createAlbumList(albumsList) {
         return albumsList.map((album) => {
@@ -103,8 +103,8 @@ function AlbumImage({
                 <p className='artistName'>{artistName}</p>
                 <a className='link' href={`/artists/${id}`}>Click For Details</a>
             </Fragment>
-        )
-    }
+        );
+    };
 
     return (
         <div
