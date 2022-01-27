@@ -1,4 +1,4 @@
-import './Styles/searchArtistApiCall.css';
+import './styles/searchArtistApiCall.css';
 
 /* API call for fetching searched artist specified in home page search input box from the Spotify
    API endpoint. */
