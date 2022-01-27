@@ -50,6 +50,7 @@ function HomePage() {
 
     return (
         <div>
+            <h1 className='rainbow'>Type In An Artists Below...</h1>
             <input
                 className='input'
                 type='text'
