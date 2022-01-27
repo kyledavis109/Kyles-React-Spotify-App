@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
 body {
     background: url('https://i.natgeofe.com/n/1db37615-012f-4981-b9ff-9e92764df1bc/19430_square.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -15,7 +18,7 @@ body {
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 500px;
+    width: 800px;
     padding: 20px;
     background-color: white;
 }
@@ -38,11 +41,74 @@ body {
 .name {
     position: absolute;
     top: 20px;
-    margin-left: 195px;
+    margin-left: 290px;
     font-weight: bold;
 }
 
 .duration {
-    margin-left: 443px;
+    margin-left: 650px;
     font-weight: bold;
+}
+
+.rainbow {
+  
+    /* Font options */
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 40px;
+    text-align: center;
+
+    /* Chrome, Safari, Opera */
+    -webkit-animation: rainbow 5s infinite; 
+
+    /* Internet Explorer */
+    -ms-animation: rainbow 5s infinite;
+
+    /* Standard Syntax */
+    animation: rainbow 5s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow {
+    0%{color: orange;}	
+    10%{color: purple;}	
+    20%{color: red;}
+    30%{color: CadetBlue;}
+    40%{color: yellow;}
+    50%{color: coral;}
+    60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+    100%{color: orange;}
+}
+ 
+/* Internet Explorer */
+@-ms-keyframes rainbow {
+    0%{color: orange;}	
+    10%{color: purple;}	
+    20%{color: red;}
+    30%{color: CadetBlue;}
+    40%{color: yellow;}
+    50%{color: coral;}
+    60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+    100%{color: orange;}
+}
+ 
+/* Standard Syntax */
+@keyframes rainbow{
+    0%{color: orange;}	
+    10%{color: purple;}	
+    20%{color: red;}
+    30%{color: CadetBlue;}
+    40%{color: yellow;}
+    50%{color: coral;}
+    60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+    100%{color: orange;}
 }
