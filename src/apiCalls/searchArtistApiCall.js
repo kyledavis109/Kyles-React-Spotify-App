@@ -7,7 +7,7 @@ async function fetchSearchArtists(searchValue) {
         throw Error('artistID param is required.');
     } else if (typeof searchValue !== 'string') {
         throw TypeError('artistID param must be a string.');
-    }
+    };
     const url =  `/api/search?searchValue=${searchValue}`;
     const response = await fetch(url);
     if (response.status !== 200) {
@@ -22,8 +22,8 @@ async function fetchSearchArtists(searchValue) {
         if (images.length !== 0) {
             width = images[0].width;
             height = images[0].height;
-            url = images[0].url
-        }
+            url = images[0].url;
+        };
         return { id, width, height, url, name };
     });
 };

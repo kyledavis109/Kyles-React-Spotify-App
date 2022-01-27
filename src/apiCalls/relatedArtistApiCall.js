@@ -9,7 +9,7 @@ export async function fetchRelatedArtists(artistID) {
         throw TypeError('artistID param must be a string.');
     } else if (artistID.length < 22) {
         throw Error('artistID param must be 22 characters long.');
-    }
+    };
     const url = `/api/relatedArtists/${artistID}`;
     const response = await fetch(url);
     if (response.status !== 200) {
