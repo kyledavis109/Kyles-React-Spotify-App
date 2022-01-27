@@ -19,7 +19,7 @@ function AlbumTracksPage() {
             throw TypeError('albumIDParam param must be a string.');
         } else if (albumIDParam.length < 22) {
             throw Error('albumIDParam param must be 22 characters long.');
-        }
+        };
         
         const albumDetails = await getAlbumTracks(albumIDParam);
         // Validation check for expected API call. Program will not continue if there is an error.
@@ -60,7 +60,7 @@ function AlbumTracksPage() {
                 const seconds = ((ms % 60000) / 1000).toFixed(0);
                 return `${minutes}:${(seconds < 10 ? '0' : '')}${seconds}`;
             };
-            return(
+            return (
                 <div 
                     className='songContainer'
                     id={id}

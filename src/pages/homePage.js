@@ -9,15 +9,18 @@ function HomePage() {
     const [searchArtistImages, setSearchArtistImages] = useState(null);
     const [searchLoading, setSearchLoading] = useState(false);
 
+
     async function handleSearch(artistSearchValue) {
+        // Validation check for artistSearchValue parameter.
         if (artistSearchValue === null) {
-            throw Error('artistSearchValue param is required.')
+            throw Error('artistSearchValue param is required.');
         } else if (typeof artistSearchValue !== 'string') {
-            throw TypeError('artistSearchValue param must be a string.')
+            throw TypeError('artistSearchValue param must be a string.');
         } else if (artistSearchValue.trim() === '') {
-            throw Error('artistSearchValue param must include a search value.')
-        }
-        const searchResults = await fetchSearchArtists(artistSearchValue)
+            throw Error('artistSearchValue param must include a search value.');
+        };
+        const searchResults = await fetchSearchArtists(artistSearchValue);
+        // Validation check for expected API call. Program will not continue if there is an error.
         if ('error' in searchResults) {
             return searchResults;
         }
@@ -26,23 +29,24 @@ function HomePage() {
 
     async function handleSearchButtonPress() {
         try {
-            setSearchLoading(true)
+            setSearchLoading(true);
             const searchResults = await handleSearch(searchValueState);
+            // Validation check for expected API call. Program will not continue if there is an error.
             if ('error' in searchResults) {
-                throw searchResults.error
-            }
-            const searchResultImages = createArtistImages(searchResults, 'showArtistName')
-            setSearchArtistImages(searchResultImages)
+                throw searchResults.error;
+            };
+            const searchResultImages = createArtistImages(searchResults, 'showArtistName');
+            setSearchArtistImages(searchResultImages);
         } catch (error) {
             if (typeof error === 'string') {
-                setSearchArtistImages(<div className='rainbow'>{error}</div>)
+                setSearchArtistImages(<div className='rainbow'>{error}</div>);
                 return
-            }
-            setSearchArtistImages(<div className='rainbow'>'Failed to load...</div>)
+            };
+            setSearchArtistImages(<div className='rainbow'>Failed to load...</div>);
         } finally {
-            setSearchLoading(false)
-        }
-    }
+            setSearchLoading(false);
+        };
+    };
 
     return (
         <div>
