@@ -100,7 +100,7 @@ function AlbumImage({
     const artistNameView = () => {
         return (
             <Fragment>
-                <p className='artistName'>{artistName}</p>
+                <h1 className='artistName'>{artistName}</h1>
                 <a className='link' href={`/artists/${id}`}>Click For Details</a>
             </Fragment>
         );
