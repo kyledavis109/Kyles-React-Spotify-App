@@ -82,6 +82,12 @@
     font-size: 30px;
 }
 
+.artistName {
+    text-align: center;
+    color: white;
+    font-family: Arial;
+}
+
 .albumListItem {
     font-size: 18px;
 }
