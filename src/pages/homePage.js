@@ -50,7 +50,7 @@ function HomePage() {
 
     return (
         <div>
-            <h1 className='rainbow1'>Type In An Artists Below...</h1>
+            <h1 className='rainbow topMargin'>Type In An Artists Below...</h1>
             <input
                 className='input'
                 type='text'
@@ -66,7 +66,7 @@ function HomePage() {
            >
                 Click To Search...
             </button>
-            <div>{searchLoading ? <div className='rainbow2'>Loading...</div> : searchArtistImages}</div>
+            <div>{searchLoading ? <div className='rainbow'>Loading...</div> : searchArtistImages}</div>
         </div> 
     );
 };
