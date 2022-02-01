@@ -15,12 +15,12 @@ function Footer() {
 
                     <div>
                         <i className="fa fa-map-marker"></i>
-                        <p><span>514 Quail Crest Dr.</span> Collierville, TN</p>
+                        <p><span>123 Something St.</span> Memphis, TN</p>
                     </div>
 
                     <div>
                         <i className="fa fa-phone"></i>
-                        <p>(901) 414-6095</p>
+                        <p>(901) 111-1111</p>
                     </div>
 
                     <div>
