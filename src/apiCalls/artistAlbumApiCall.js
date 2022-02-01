@@ -1,6 +1,3 @@
-import './styles/artistAlbumApiCall.css';
-
-
 /* API call for fetching albums of related artists of the specified artists on the homepage in the
    dropdown menu from the Spotify API endpoint. */
 async function getArtistAlbums(artistID) {
