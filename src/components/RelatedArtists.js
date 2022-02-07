@@ -74,7 +74,7 @@ function RelatedArtists({artistID = null}) {
     }, [relatedArtists, currentSelectedArtist]);
 
     if (!artistResults) {
-        return 'Loading...';
+        return <div className='rainbow'>Loading...</div>;
     }
     return artistResults;  
 };
