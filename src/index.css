@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Anton');
 
-
 body {
     background: url('https://i.natgeofe.com/n/1db37615-012f-4981-b9ff-9e92764df1bc/19430_square.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -10,6 +9,9 @@ body {
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .rainbow {
@@ -78,26 +80,23 @@ body {
     100%{color: orange;}
 }
 
-@media screen and (max-width: 481px) {
+
+/* Mobile View */
+@media screen and (max-width: 500px) {
+    body {
+        max-width: 100%;
+        box-sizing: border-box;
+        border: 5px solid red;
+    }
+
     .rainbow {
         font-size: 14px;
     }
 }
 
-@media screen and (min-width: 641px) {
+/* Tablet View */
+@media screen and (min-width: 800px) {
     .rainbow {
         font-size: 18px;
-    }
-}
-
-@media screen and (min-width: 961px) {
-    .rainbow {
-        font-size: 30px;
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    .rainbow {
-        font-size: 40px;
     }
 }
