@@ -88,3 +88,96 @@ html {
 
 .aeu-signature { font-family: "Quicksand"; }
 .aeu-signature > img { height: 30px; }
+
+@media screen and (max-width: 481px) {
+    .slider-menu {
+        font-size: 7px;
+    }
+
+    .header-bar {
+        width: 80%;
+        height: 100px;
+    }
+
+    /* .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+    } */
+
+    .header-bar {
+        position: relative;
+        width: 60%;
+        min-width: 300px;
+        height: 60px;
+        border: 10px solid transparent;
+        border-top: 10px solid #fffa;
+        border-left: 10px solid #fffa;
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    .slider-menu {
+        font-size: 8px;
+    }
+
+    .header-bar {
+        width: 80%;
+        height: 100px;
+    } */
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+    }
+
+    .header-bar {
+        position: relative;
+        width: 60%;
+        min-width: 300px;
+        height: 60px;
+        border: 10px solid transparent;
+        border-top: 10px solid #fffa;
+        border-left: 10px solid #fffa;
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .slider-menu {
+        font-size: 15px;
+    }
+
+    .header-bar {
+        width: 80%;
+        height: 100px;
+    } */
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+    }
+
+    .header-bar {
+        position: relative;
+        width: 60%;
+        min-width: 300px;
+        height: 60px;
+        border: 10px solid transparent;
+        border-top: 10px solid #fffa;
+        border-left: 10px solid #fffa;
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+}

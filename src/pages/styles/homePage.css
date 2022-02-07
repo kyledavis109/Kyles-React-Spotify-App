@@ -25,3 +25,82 @@
 .topMargin {
     margin-top: 70px;
 }
+
+
+@media screen and (max-width: 481px) {
+    .input {
+        margin-left: 10px;
+        font-size: 17px;
+        width: 280px;
+    }
+
+    .button {
+        margin-left: 300px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    .input {
+        margin-left: 150px;
+        font-size: 17px;
+        /* width: 280px; */
+    }
+
+    .button {
+        margin-left: 560px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .input {
+        margin-left: 350px;
+        font-size: 17px;
+        /* width: 280px; */
+    }
+
+    .button {
+        margin-left: 660px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .input {
+        margin-left: 300px;
+        font-size: 17px;
+        /* width: 280px; */
+    }
+
+    .button {
+        margin-left: 730px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    .input {
+        margin-left: 450px;
+        font-size: 17px;
+        /* width: 280px; */
+    }
+
+    .button {
+        margin-left: 860px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1361px) {
+    .input {
+        margin-left: 430px;
+        font-size: 17px;
+        /* width: 280px; */
+    }
+
+    .button {
+        margin-left: 840px;
+        font-size: 10px;
+    }
+}

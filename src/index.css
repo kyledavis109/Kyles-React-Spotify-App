@@ -17,7 +17,10 @@ body {
     /* Font options */
     font-family: 'Pacifico', cursive;
     text-shadow: 2px 2px 4px #000000;
+    
+    /* seperate this into own class */
     font-size: 40px;
+    /* seperate this into own class */
     text-align: center;
 
     /* Chrome, Safari, Opera */
@@ -61,7 +64,7 @@ body {
 }
  
 /* Standard Syntax */
-@keyframes rainbow{
+@keyframes rainbow {
     0%{color: orange;}	
     10%{color: purple;}	
     20%{color: red;}
@@ -73,4 +76,28 @@ body {
     80%{color: DeepPink;}
     90%{color: DodgerBlue;}
     100%{color: orange;}
+}
+
+@media screen and (max-width: 481px) {
+    .rainbow {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    .rainbow {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .rainbow {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .rainbow {
+        font-size: 40px;
+    }
 }

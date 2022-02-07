@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 80px;
+    margin-left: 118px;
     margin-right: 5px;
     position: relative;
     float: left;
@@ -92,25 +92,246 @@
     font-size: 18px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 481px) {
     .imgGroup {
-        float: none;
-        display: block;
+        display: flex;
+        margin-left: 112px;
+        margin-right: 5px;
+        position: relative;
+        float: left;
+        max-width: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 200px;
+        width: 200px;
+        background-color: black;
+    }
+
+    .img {
+        height: 100%;
         width: 100%;
-        margin: 50px;
-        padding: 14px;
-        width: 40%
+    }
+
+    .imgTitle {
+        font-size: 7px;
+        margin-left: 25px;
+        font-weight: bold;
+    }
+
+    .imgDescrip {
+        margin-top: 0.25em;
+        margin-left: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 10px;
+        font-size: 7px;
+    }
+
+    .albumName {
+        font-size: 15px;
+    }
+
+    .link {
+        font-size: 15px;
+    }
+
+    .albumListItem {
+        font-size: 10px;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 641px) {
     .imgGroup {
-        float: none;
-        /* display: block; */
-        /* width: 100%; */
-        margin: 30px;
-        padding: 14px;
-        width: 20%;
-        margin-right: 70px;
+        display: flex;
+        margin-left: 215px;
+        margin-right: 5px;
+        position: relative;
+        float: left;
+        max-width: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 300px;
+        width: 300px;
+        background-color: black;
+    }
+
+    .img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .imgTitle {
+        font-size: 10px;
+        margin-left: 25px;
+        font-weight: bold;
+    }
+
+    .imgDescrip {
+        margin-top: 0.25em;
+        margin-left: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 10px;
+        font-size: 7px;
+    }
+
+    .albumName {
+        font-size: 15px;
+    }
+
+    .link {
+        font-size: 15px;
+    }
+
+    .albumListItem {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .imgGroup {
+        display: flex;
+        margin-left: 112px;
+        margin-right: 5px;
+        position: relative;
+        float: left;
+        max-width: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 300px;
+        width: 300px;
+        background-color: black;
+    }
+
+    .img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .imgTitle {
+        font-size: 20px;
+        margin-left: 25px;
+        font-weight: bold;
+    }
+
+    .imgDescrip {
+        margin-top: 0.25em;
+        margin-left: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 10px;
+        font-size: 7px;
+    }
+
+    .albumName {
+        font-size: 20px;
+    }
+
+    .link {
+        font-size: 18px;
+    }
+
+    .albumListItem {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1025px) {}
+
+@media screen and (min-width: 1281px) {}
+
+@media screen and (min-width: 1361px) {
+    .imgGroup {
+        display: flex;
+        margin-left: 10px;
+        margin-right: 5px;
+        position: relative;
+        float: left;
+        max-width: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 300px;
+        width: 300px;
+        background-color: black;
+    }
+
+    .img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .imgTitle {
+        font-size: 20px;
+        margin-left: 25px;
+        font-weight: bold;
+    }
+
+    .imgDescrip {
+        margin-top: 0.25em;
+        margin-left: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 10px;
+        font-size: 7px;
+    }
+
+    .albumName {
+        font-size: 20px;
+    }
+
+    .link {
+        font-size: 18px;
+    }
+
+    .albumListItem {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1381px) {
+    .imgGroup {
+        display: flex;
+        margin-left: 120px;
+        margin-right: 5px;
+        position: relative;
+        float: left;
+        max-width: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 300px;
+        width: 300px;
+        background-color: black;
+    }
+
+    .img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .imgTitle {
+        font-size: 20px;
+        margin-left: 25px;
+        font-weight: bold;
+    }
+
+    .imgDescrip {
+        margin-top: 0.25em;
+        margin-left: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 10px;
+        font-size: 7px;
+    }
+
+    .albumName {
+        font-size: 20px;
+    }
+
+    .link {
+        font-size: 18px;
+    }
+
+    .albumListItem {
+        font-size: 15px;
     }
 }
