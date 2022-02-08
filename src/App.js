@@ -9,16 +9,15 @@ function App() {
 
   return (
     <Router>
-      <div>
         <Header />
-          <Routes>
+
+        <Routes>
             <Route exact path="/" element={<HomePage/>} />
             <Route exact path="/artists/:artistID" element={<ArtistAlbumsPage/>}/>
             <Route exact path="/albums/:albumID" element={<AlbumTracksPage/>} />
-          </Routes>
-          <br></br>
+        </Routes>
+        
         <Footer />
-      </div>
     </Router>
   );
 };
