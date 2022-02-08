@@ -1,15 +1,23 @@
 .box {
-    margin-left: 90px;
-    margin-right: 5px;
-    position: relative;
-    float: left;
+    /* position: relative; */
     max-width: 50%;
     border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 800px;
-    padding: 20px;
+    max-width: 70%;
+    padding: 10px;
     background-color: white;
+    border: 5px solid red;
+    display: grid;
+    box-sizing: border-box;
+    margin: 20px;
+    margin-left: 100px;
+}
+
+.albumPageHeader {
+    margin: 0;
+    padding: 0;
+    margin-top: 75px;
+    margin-bottom: 20px;
+    font-size: 40px;
 }
 
 .songContainer {
@@ -17,10 +25,10 @@
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
-      
+    /* border: 5px solid red; */
 }
 
-.track {
+/* .track {
     position: absolute;
     top: 20px;
     margin-left: -15px;
@@ -37,151 +45,51 @@
 .duration {
     margin-left: 650px;
     font-weight: bold;
-}
+} */
 
-@media screen and (max-width: 481px) {
+/* Mobile View */
+@media screen and (max-width: 500px) {
     .box {
-        /* margin-left:80px; */
-        justify-content: center;
-    }
-
-    .songContainer {
-        justify-content: center;
-    }
-
-    .track {
-        margin-left: -15px;
-        font-size: 13px;
-    }
-    
-    .name {
-        margin-left: 50px;
-        font-size: 13px;
-    }
-
-    .duration {
-        margin-left: 148px;
-        font-size: 13px;
-    }
-}
-
-@media screen and (min-width: 641px) {
-    .track {
-        margin-left: -10px;
-        font-size: 13px;
-    }
-    
-    .name {
-        margin-left: 100px;
-        font-size: 13px;
-    }
-
-    .duration {
-        margin-left: 350px;
-        font-size: 13px;
-    }
-
-    .box {
-        margin-left: 500px;
-        margin-right: 5px;
-        position: relative;
-        /* float: left; */
         max-width: 50%;
-        border-radius: 10px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 800px;
-        padding: 20px;
-        background-color: white;
-        /* justify-content: center; */
-        display: inline-block;
+        display: grid;
+        margin: 10px;
+        border: 5px solid red;
     }
 
     .songContainer {
-        text-align: center;
-        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
         display: flex;
-        justify-content: space-between;
-          
+        justify-content: space-around;
+    }
+
+    .albumPageHeader {
+        font-size: 25px;
+        padding: 0;
+        margin-top: 75px;
     }
 }
 
-@media screen and (min-width: 961px) {
-    .track {
-        margin-left: -10px;
-        font-size: 13px;
-    }
-    
-    .name {
-        margin-left: 100px;
-        font-size: 13px;
-    }
-
-    .duration {
-        margin-left: 240px;
-        font-size: 13px;
-    }
-
+/* Tablet View */
+@media screen and (max-width: 800px) {
     .box {
-        margin-left: 500px;
-        bottom: 300px;
-        margin-right: 5px;
-        position: relative;
-        /* float: left; */
-        max-width: 50%;
-        border-radius: 10px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 800px;
-        padding: 20px;
-        background-color: white;
-        /* justify-content: center; */
+        max-width: 100%;
     }
 
     .songContainer {
-        text-align: center;
-        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
         display: flex;
-        justify-content: space-between; 
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    .track {
-        margin-left: -10px;
-        font-size: 13px;
-    }
-    
-    .name {
-        margin-left: 100px;
-        font-size: 13px;
+        justify-content: space-around;
     }
 
-    .duration {
-        margin-left: 240px;
-        font-size: 13px;
-    }
-
-    .box {
-        margin-left: 500px;
-        bottom: 300px;
-        margin-right: 5px;
-        position: relative;
-        /* float: left; */
-        max-width: 50%;
-        border-radius: 10px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 800px;
-        padding: 20px;
-        background-color: white;
-        /* justify-content: center; */
-    }
-
-    .songContainer {
-        text-align: center;
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: space-between; 
+    .albumPageHeader {
+        font-size: 25px;
+        padding: 0;
+        margin-top: 75px;
     }
 }
