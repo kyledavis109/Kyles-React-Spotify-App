@@ -91,3 +91,20 @@
         font-size: 20px;
     }
 }
+
+/* Tablet View */
+@media screen and (max-width: 800px) {
+    .header-bar {
+        height: 100px;
+        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .header-bar::after {
+        height: 100px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+}

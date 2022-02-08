@@ -49,24 +49,28 @@ function HomePage() {
     };
 
     return (
-        <div>
-            <h1 className='rainbow topMargin'>Type In An Artists Below...</h1>
-            <input
-                className='input'
-                type='text'
-                id='searchInput'
-                placeHolder='Search Artist...'
-                onChange={(event) => setSearchValueState(event.target.value)}
-            />
-           <button
-                className='button'
-                id='searchInputButton'
-                onClick={handleSearchButtonPress}
-                disabled = {searchLoading}
-           >
-                Click To Search...
-            </button>
-            <div>{searchLoading ? <div className='rainbow'>Loading...</div> : searchArtistImages}</div>
+        <div className='homePageContainer'>
+            <h1 className='rainbow homePageHeader'>Type In An Artists Below...</h1>
+            
+            <div className='searchBoxContainer'>
+                <input
+                    className='input'
+                    type='text'
+                    id='searchInput'
+                    placeHolder='Search Artist...'
+                    onChange={(event) => setSearchValueState(event.target.value)}
+                />
+                <button
+                        className='button'
+                        id='searchInputButton'
+                        onClick={handleSearchButtonPress}
+                        disabled = {searchLoading}
+                >
+                    Search
+                </button>
+            </div>
+
+            <div className='artistImagesContainer'>{searchLoading ? <div className='rainbow'>Loading...</div> : searchArtistImages}</div>
         </div> 
     );
 };

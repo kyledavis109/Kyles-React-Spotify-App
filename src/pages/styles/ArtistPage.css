@@ -5,24 +5,52 @@ h1 {
     color:#212121;
 }
 
-.display {
-    /* padding-top: 3%;
-    padding-left: 7%; */
-    /* padding: 5%; */
-    /* margin-bottom: -250px; */
-    /* padding-top: -100%; */
-    margin-left: 145px;
-    padding-top: 90%;
-    padding-left: 20%;
-    padding-right: 30%;
-    /* padding-bottom: 50px; */
-    /* margin-bottom: 200px; */
+.artistPageHeader {
+    /* margin: 0;
+    padding: 0; */
+    margin-top: 75px;
+    margin-bottom: 20px;
+    font-size: 40px;
 }
 
-@media screen and (max-width: 480px) {
-    .display {
-        padding: 33%;
-        margin-left: -10px;
-        margin-bottom: -140px;
+.albumContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.relatedArtistContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Mobile View */
+@media screen and (max-width: 500px) {
+    .albumContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .relatedArtistContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+/* Tablet View */
+@media screen and (max-width: 800px) {
+    .albumContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .relatedArtistContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }

@@ -1,17 +1,3 @@
-.box {
-    /* position: relative; */
-    max-width: 50%;
-    border-radius: 10px;
-    max-width: 70%;
-    padding: 10px;
-    background-color: white;
-    border: 5px solid red;
-    display: grid;
-    box-sizing: border-box;
-    margin: 20px;
-    margin-left: 100px;
-}
-
 .albumPageHeader {
     margin: 0;
     padding: 0;
@@ -20,40 +6,30 @@
     font-size: 40px;
 }
 
+.box {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    background-color: white;
+    display: grid;
+    box-sizing: border-box;
+    margin: 100px;
+}
+
 .songContainer {
     text-align: center;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    /* border: 5px solid red; */
 }
-
-/* .track {
-    position: absolute;
-    top: 20px;
-    margin-left: -15px;
-    font-weight: bold;
-}
-
-.name {
-    position: absolute;
-    top: 20px;
-    margin-left: 290px;
-    font-weight: bold;
-}
-
-.duration {
-    margin-left: 650px;
-    font-weight: bold;
-} */
 
 /* Mobile View */
 @media screen and (max-width: 500px) {
     .box {
-        max-width: 50%;
+        max-width: 20%;
         display: grid;
-        margin: 10px;
-        border: 5px solid red;
+        /* margin: 20px; */
     }
 
     .songContainer {
@@ -74,8 +50,14 @@
 
 /* Tablet View */
 @media screen and (max-width: 800px) {
+    .albumPageHeader {
+        margin: 0;
+        padding: 0;
+    }
+
     .box {
         max-width: 100%;
+        margin: 70px;
     }
 
     .songContainer {
@@ -88,7 +70,7 @@
     }
 
     .albumPageHeader {
-        font-size: 25px;
+        font-size: 50px;
         padding: 0;
         margin-top: 75px;
     }

@@ -91,20 +91,15 @@ function AlbumTracksPage() {
     return (
         <div>
             <h1 className='rainbow albumPageHeader'>Album Details:</h1>
-            <AlbumImage className='albumImage'
+            <AlbumImage
                 id={albumID}
                 url={albumURL}
                 showAlbumName={false}
                 showTopAlbums={false}
             />
             <div className='box'>
-            <div className='align'>
-                {/* <p className='track'>Track #:</p>
-                <p className='name'>Track Name:</p>
-                <p className='duration'>Duration:</p> */}
                 {albumDetails}
                 </div>
-            </div>
         </div>
     );
 };
