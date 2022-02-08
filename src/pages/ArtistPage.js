@@ -60,13 +60,16 @@ function ArtistAlbumsPage() {
 
     return (
         <div>
-            <h1 className='rainbow'>Artist's Albums</h1>
-            {albumImages}
-            
-            <h1 className='rainbow display'>Related Artists</h1>
-            <RelatedArtists
-                artistID={artistID}
-            />
+            <h1 className='rainbow artistPageHeader'>Artist's Albums</h1>
+            <div className='albumContainer'>
+                {albumImages}
+            </div>
+            <h1 className='rainbow artistPageHeader'>Related Artists</h1>
+            <div className='relatedArtistContainer'>
+                <RelatedArtists
+                    artistID={artistID}
+                />
+            </div>
         </div>
     );
 };
