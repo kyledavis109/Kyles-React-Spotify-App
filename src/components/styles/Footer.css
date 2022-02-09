@@ -12,6 +12,8 @@
     padding: 33px;
     box-sizing: border-box;
     color: white;
+    border-radius: 10px;
+    /* position: absolute; */
 }
 
 .footer-section {
