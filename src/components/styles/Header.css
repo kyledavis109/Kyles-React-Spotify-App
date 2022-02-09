@@ -45,7 +45,7 @@
 }
 
 .slider-menu > a {
-	display: inline-flex;
+	/* display: inline-flex;
 	padding: 14px;
 	margin-left: 2px;
 	font-family: 'Quicksand', sans-serif;
@@ -53,12 +53,31 @@
 	cursor: pointer;
 	transition: 0.3s linear all;
 	user-select: none;
+    border: 5px solid red; */
+    display: inline-flex;
+    background-color: #fffa;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: 0.3s linear all;
+    padding: 7px;
+    margin: 5px;
+    text-shadow: 2px 2px 4px #000000;
+    /* box-shadow: 2px 2px #000000; */
+    font-family: 'Quicksand', sans-serif;
+    user-select: none;
 }
 
-.slider-menu > a:hover {
+/* .slider-menu > a:hover {
 	color: #faa;
 	box-shadow: 0 50px 5px rgba(0, 0, 0, 0.15) inset;
-}
+} */
 
 .aeu-signature {
 	position: fixed;
