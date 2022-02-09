@@ -74,10 +74,10 @@
     user-select: none;
 }
 
-/* .slider-menu > a:hover {
+.slider-menu > a:hover {
 	color: #faa;
 	box-shadow: 0 50px 5px rgba(0, 0, 0, 0.15) inset;
-} */
+}
 
 .aeu-signature {
 	position: fixed;
