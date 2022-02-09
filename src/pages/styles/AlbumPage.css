@@ -27,7 +27,7 @@
 /* Mobile View */
 @media screen and (max-width: 500px) {
     .box {
-        max-width: 20%;
+        max-width: 40%;
         display: grid;
         /* margin: 20px; */
     }
