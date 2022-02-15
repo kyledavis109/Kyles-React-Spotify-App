@@ -15,7 +15,6 @@
     display: grid;
     box-sizing: border-box;
     margin: 100px;
-    /* border: 5px solid red; */
 }
 
 .songContainer {
@@ -29,8 +28,6 @@
 @media screen and (max-width: 500px) {
     .box {
         max-width: 40%;
-        display: grid;
-        /* margin: 20px; */
     }
 
     .songContainer {
@@ -58,7 +55,8 @@
 
     .box {
         max-width: 100%;
-        margin: 70px;
+        margin: 30px;
+        border: 5px solid red;
     }
 
     .songContainer {
