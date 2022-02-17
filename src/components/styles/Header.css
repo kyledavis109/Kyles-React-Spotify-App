@@ -45,15 +45,6 @@
 }
 
 .slider-menu > a {
-	/* display: inline-flex;
-	padding: 14px;
-	margin-left: 2px;
-	font-family: 'Quicksand', sans-serif;
-	color: #fff;
-	cursor: pointer;
-	transition: 0.3s linear all;
-	user-select: none;
-    border: 5px solid red; */
     display: inline-flex;
     background-color: #fffa;
     border: none;
@@ -69,7 +60,6 @@
     padding: 7px;
     margin: 5px;
     text-shadow: 2px 2px 4px #000000;
-    /* box-shadow: 2px 2px #000000; */
     font-family: 'Quicksand', sans-serif;
     user-select: none;
 }
