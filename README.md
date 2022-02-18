@@ -1,25 +1,14 @@
 # Kyle's React Spotify App
 
-  
-
 ## About
 
 This project is a music app that interacts with the Spotify API to allow the end user to search for a music artist and display that specified artist's albums and related artists. Clicking on an album will take you to a page to view the album details of the selected album or clicking on a related artist will take you to that related artist's albums and also display related artists of the selected artist.
 
-![home](Images/1.png)
-
 ### Getting Started
-
-  
 
 ***Please start with getting the back end server setup first before this front end located at https://github.com/kyledavis109/React-Express. You will need the back end server up and running before you can launch the front end. The back end also includes documentation on setting up a Spotify Developer account and obtaining a Client ID and a Client Secret.***
 
-  
-
 #### Installation
-
-  
-  
 
 1. To get started you will need to install Node.js on your computer (https://nodejs.org/en/download/).
 
@@ -33,24 +22,15 @@ This project is a music app that interacts with the Spotify API to allow the end
 
 6. You will need a few npm packages installed to run this app. To install the packages, in the terminal navigate to the root folder of the repository and then run `npm i `
 
-  
-
 Congratulations, you've completed installation!
-
-  
 
 #### To Start Application
 
 1. In a terminal, navigate to the root folder of the repository and run `npm run start`.
 
-  
+*Make sure to have the API running first.*
 
-*Make sure to have API running first.*
-
-  
 
 ### Support
-
-  
 
 If you need any help along the way getting this app started, please contact me by email at kyledavis109@gmail.com.
