@@ -6,7 +6,7 @@ This project is a music app that interacts with the Spotify API to allow the end
 
 ### Getting Started
 
-***Please start with getting the API setup first before this frontend application located at https://github.com/kyledavis109/React-Express. You will need the API up and running before you can launch the front end. The back end also includes documentation on setting up a Spotify Developer account and obtaining a Client ID and a Client Secret.***
+***Please start with getting the API setup first before this frontend application located at https://github.com/kyledavis109/React-Express. You will need the API up and running before you can launch the frontend application. The API also includes documentation on setting up a Spotify Developer account and obtaining a Client ID and a Client Secret.***
 
 #### Installation
 
@@ -22,7 +22,7 @@ This project is a music app that interacts with the Spotify API to allow the end
 
 6. You will need a few npm packages installed to run this app. To install the packages, in the terminal navigate to the root folder of the repository and then run `npm i`
 
-Congratulations! you've completed installation!
+***Congratulations! you've completed installation!***
 
 #### To Start Application
 
