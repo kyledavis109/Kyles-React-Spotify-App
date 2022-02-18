@@ -22,7 +22,7 @@ This project is a music app that interacts with the Spotify API to allow the end
 
 6. You will need a few npm packages installed to run this app. To install the packages, in the terminal navigate to the root folder of the repository and then run `npm i`
 
-***Congratulations! you've completed installation!***
+***Congratulations! You've completed installation!***
 
 #### To Start Application
 
