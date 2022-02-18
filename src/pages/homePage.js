@@ -71,7 +71,7 @@ function HomePage() {
             </div>
 
             <div className='artistImagesContainer'>{searchLoading ? <div className='rainbow'>Loading...</div> : searchArtistImages}</div>
-        </div> 
+        </div>
     );
 };
 
