@@ -18,7 +18,7 @@ This project is a music app that interacts with the Spotify API to allow the end
 
 4. Once you have installed everything and are setup, you are ready to clone the repository. To clone the repository, open up a terminal and run `git clone https://github.com/kyledavis109/Kyles-React-Spotify-App` to clone the repository into a folder on your computer.
 
-5. This is only the frontend of the application and you will also need to clone the API for this app from my repository located [here](https://github.com/kyledavis109/Spotify-App-Express).
+5. This is only the frontend of the application! You will also need to clone the API for this app from my repository located [here](https://github.com/kyledavis109/Spotify-App-Express).
 
 6. You will need a few npm packages installed to run this app. To install the packages, in the terminal navigate to the root folder of the repository and then run `npm i`
 
