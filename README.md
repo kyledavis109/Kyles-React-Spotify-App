@@ -16,7 +16,7 @@ This project is a music app that interacts with the Spotify API to allow the end
 
 3. You will also need to have a GitHub account as well as a SSH Key [SSH Key Tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-4. Once you have installed everything and are setup, you are ready to clone the repository. To clone the repository, open up a terminal and run `git clone https://github.com/kyledavis109/React-Music-Project.git` to clone the repository into a folder on your computer.
+4. Once you have installed everything and are setup, you are ready to clone the repository. To clone the repository, open up a terminal and run `git clone https://github.com/kyledavis109/Kyles-React-Spotify-App` to clone the repository into a folder on your computer.
 
 5. This is only the frontend of the application and you will need to also clone the API for this app from my repository at the address [API Repo](https://github.com/kyledavis109/React-Express).
 
