@@ -6,7 +6,7 @@ This project is a music app that interacts with the Spotify API to allow the end
 
 ### Getting Started
 
-***Please start with getting the API setup first before this frontend application located at https://github.com/kyledavis109/React-Express. You will need the API up and running before you can launch the frontend application. The API also includes documentation on setting up a Spotify Developer account and obtaining a Client ID and a Client Secret.***
+***Please start with getting the API setup first before this frontend application located at https://github.com/kyledavis109/Spotify-App-Express. You will need the API up and running before you can launch the frontend application. The API also includes documentation on setting up a Spotify Developer account and obtaining a Client ID and a Client Secret.***
 
 #### Installation
 
@@ -18,7 +18,7 @@ This project is a music app that interacts with the Spotify API to allow the end
 
 4. Once you have installed everything and are setup, you are ready to clone the repository. To clone the repository, open up a terminal and run `git clone https://github.com/kyledavis109/Kyles-React-Spotify-App` to clone the repository into a folder on your computer.
 
-5. This is only the frontend of the application and you will need to also clone the API for this app from my repository at the address [API Repo](https://github.com/kyledavis109/React-Express).
+5. This is only the frontend of the application and you will need to also clone the API for this app from my repository at the address [API Repo](https://github.com/kyledavis109/Spotify-App-Express).
 
 6. You will need a few npm packages installed to run this app. To install the packages, in the terminal navigate to the root folder of the repository and then run `npm i`
 
