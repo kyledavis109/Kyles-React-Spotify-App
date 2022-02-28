@@ -52,7 +52,7 @@ function ArtistAlbumsPage() {
                 return;
             };
             // Only run if not a error.
-            // This is what causes the albumImage component to start rendering. 
+            // This is what causes the AlbumImage component to start rendering. 
             setAlbumImages(createAlbumImages(results));
         };
         artistAlbums();
