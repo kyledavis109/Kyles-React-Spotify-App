@@ -36,7 +36,7 @@ function createArtistImages(relatedArtistsData, renderType = null, currentSelect
             throw Error('currentSelectedArtist param must contain the keys artist and albums.');
         };
         if (handleRelatedArtistAlbums === null || handleRelatedArtistAlbums === undefined) {
-            throw Error('handleRelatedArttistAlbums param is required.');
+            throw Error('handleRelatedArtistAlbums param is required.');
         } else if (typeof handleRelatedArtistAlbums !== 'function') {
             throw TypeError('handleRelatedArtistAlbums param must be a function');
         };
