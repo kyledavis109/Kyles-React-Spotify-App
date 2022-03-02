@@ -3,6 +3,7 @@ import fetchRelatedArtists from '../apiCalls/relatedArtistApiCall';
 import getArtistAlbums  from '../apiCalls/artistAlbumApiCall';
 import createArtistImages  from '../functions/createArtistImages';
 
+// Displays the related artists album image components based on artistID.
 function RelatedArtists({artistID = null}) {
     if (artistID === null) {
         throw Error('artistID prop is required.');

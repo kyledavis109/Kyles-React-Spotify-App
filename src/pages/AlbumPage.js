@@ -4,6 +4,7 @@ import getAlbumTracks from '../apiCalls/albumTrackApiCall';
 import AlbumImage from '../components/AlbumImage';
 import './styles/AlbumPage.css';
 
+// Show you the album details of selected album on ArtistPage.
 function AlbumTracksPage() {
 
     const [albumDetails, setAlbumDetails] = useState([]);
@@ -55,6 +56,7 @@ function AlbumTracksPage() {
         return songs.map((song) => {
             //Rendering of album tracks information.
             const { id, name, track_number, duration_ms } = song;
+            // Function to convert miliseconds to readable time ex. 3:10.
             const cal = (ms) => {
                 const minutes = Math.floor(duration_ms / 60000);
                 const seconds = ((ms % 60000) / 1000).toFixed(0);

@@ -1,5 +1,9 @@
 import AlbumImage from '../components/AlbumImage';
 
+// relatedArtistData: typeof array of objects - The data used to render an image component.
+// renderType: typeof string - showTopAlbums and showArtistName - Used to dynamically render specific components.
+// currentSelectedArtist : typeof object, keys: artist and albums - Data used to load album list.
+// handleRelatedArtistAlbums - typeof function - Used to fetch album data for artists.
 function createArtistImages(relatedArtistsData, renderType = null, currentSelectedArtist = null, handleRelatedArtistAlbums = null) {
     if (relatedArtistsData === null || relatedArtistsData === undefined) {
         throw Error('relatedArtistsData is a required param.');
