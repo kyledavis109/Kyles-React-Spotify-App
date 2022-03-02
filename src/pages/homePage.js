@@ -61,10 +61,10 @@ function HomePage() {
                     onChange={(event) => setSearchValueState(event.target.value)}
                 />
                 <button
-                        className='button'
-                        id='searchInputButton'
-                        onClick={handleSearchButtonPress}
-                        disabled = {searchLoading}
+                    className='button'
+                    id='searchInputButton'
+                    onClick={handleSearchButtonPress}
+                    disabled = {searchLoading}
                 >
                     Search
                 </button>
