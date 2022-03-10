@@ -10,7 +10,7 @@ This project is a music app that interacts with the Spotify API to allow the end
 
 #### Installation
 
-1. To get started you will need to install Node.JS on your computer. [Node.JS Download](https://nodejs.org/en/download/).
+1. To get started you will need to install Node.js on your computer. [Node.js Download](https://nodejs.org/en/download/).
 
 2. Next you will need to install Git to pull the code from my Github repository. [Git Download](https://git-scm.com/downloads).
 
