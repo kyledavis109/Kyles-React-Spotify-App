@@ -79,7 +79,7 @@ function AlbumTracksPage() {
     useEffect(() => {
         async function createAlbumDetails() {
             const songs = await handleGetSongs(albumID);
-            // Validation check for handleGetSongs. If there is an error with the 
+            // Validation check for handleGetSongs. If there is an error the song details will not render.
             if ('error' in songs) {
                 setAlbumDetails(songs.error);
                 return;
